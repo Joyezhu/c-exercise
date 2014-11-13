@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int a = 20;
+    int score = a + 100; //score:120
+    printf("%d\n", score); // score:120
+    
+    {
+        int score = 50;
+        {
+            score = 10;
+            printf("%d\n", score);
+        }
+        a = 10;
+    }
+    
+    {
+        score = a + 250;
+        int score = 30;
+        printf("%d\n, score);
+    }
+    
+    printf("%d\n", score);
+    return 0;
+}

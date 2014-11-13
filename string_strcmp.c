@@ -19,3 +19,36 @@ int strcmp(char *s, char *t)
 			
 	return *s - *t;
 }
+
+/* strcmp: Standard C Library version */
+int __cdecl strcmp (const char * src, const char * dst)
+{
+	int ret = 0;
+	
+	while(!(rst = *(unsigned char *) src - (unsigned char *) dst) && *dst)
+		++src,++dst;
+		
+	if (ret < 0 ) {
+		ret = -1;
+	} else if (ret > 0) {
+		ret = 1;
+	}
+	
+	return (ret);
+}
+
+/* strncmp: Standard C Library version */
+int __cdecl strncmp(const char * first, const char * last, size_t count)
+{
+	if(!count)
+		return (0);
+
+	while(--count && *first && *first == *last) {
+	
+		first++;
+		last++
+	}
+	
+	return (*(unsigned char *) first - *(unsigned char *)last);
+
+}

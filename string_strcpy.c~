@@ -36,3 +36,20 @@ void strcpy(char *s, char *t)
 	while (*s++ = *t++)
 	;
 }
+
+/* strncpy: Standard C Library version */
+char * __cdecl strncpy (char * dst, const char * src, size_t count)
+{
+	char *start = dst;
+	
+	while(count && (&dst++ = *src++))
+		count --;
+		
+	if(count) {
+	
+		while(--count)
+			*dst++ = '\0'
+	}
+	
+	return (start);
+}
